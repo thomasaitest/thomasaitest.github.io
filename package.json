@@ -1,0 +1,17 @@
+{
+  "name": "app-hub",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Samleside for Thomas sine nettapper, med enkel statistikk",
+  "scripts": {
+    "dev": "vite",
+    "stats": "node scripts/generate-stats.mjs",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "node --test scripts/"
+  },
+  "devDependencies": {
+    "vite": "^8.3.4"
+  }
+}

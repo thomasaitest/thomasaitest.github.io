@@ -1,0 +1,28 @@
+{
+  "site": {
+    "title": "Thomas sine apper",
+    "subtitle": "Små nettapper jeg bygger på si. Uten reklame, uten konto."
+  },
+  "apps": [
+    {
+      "id": "solitaire",
+      "name": "Solitaire",
+      "emoji": "🃏",
+      "description": "Klassisk Klondike uten reklame og uten konto. Smart trykk, hint og angre. Virker uten nett.",
+      "url": "https://thomasaitest.github.io/solitaire/",
+      "repo": "thomasaitest/solitaire",
+      "tags": ["Spill", "PWA"],
+      "loc": { "paths": ["src", "index.html"] }
+    },
+    {
+      "id": "heddas-verden",
+      "name": "Heddas verden",
+      "emoji": "🐾",
+      "description": "3D-spill for barn: adopter kjæledyr, stell dem, lag din egen figur og bygg ditt eget hus.",
+      "url": "https://thomasaitest.github.io/heddas-verden/",
+      "repo": "thomasaitest/heddas-verden",
+      "tags": ["Spill", "3D", "PWA"],
+      "loc": { "paths": ["src", "index.html"] }
+    }
+  ]
+}

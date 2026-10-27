@@ -1,0 +1,69 @@
+name: Oppdater statistikk og publiser
+
+# Ingen hemmeligheter nødvendig: appene er offentlige og klones anonymt,
+# GitHub API leses uten token, og publisering bruker innebygd GITHUB_TOKEN.
+on:
+  schedule:
+    - cron: '*/30 * * * *'   # sjekker om en app har fått nye commits; regenererer minst daglig
+  push:
+    branches: [main]
+  workflow_dispatch:
+  repository_dispatch:       # valgfritt: kan utløses fra en app (krever token, se docs/AUTOMATION.md)
+    types: [app-deployed]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - name: Må statistikken oppdateres?
+        id: gate
+        run: |
+          if [ "${{ github.event_name }}" = "schedule" ]; then
+            node scripts/needs-update.mjs
+          else
+            echo "needed=true" >> "$GITHUB_OUTPUT"
+          fi
+      - if: steps.gate.outputs.needed == 'true'
+        run: npm ci
+      - if: steps.gate.outputs.needed == 'true'
+        run: npm test
+      - if: steps.gate.outputs.needed == 'true'
+        run: npm run stats
+      - if: steps.gate.outputs.needed == 'true'
+        run: npm run build
+      - if: steps.gate.outputs.needed == 'true'
+        run: touch dist/.nojekyll
+      - if: steps.gate.outputs.needed == 'true'
+        uses: actions/configure-pages@v5
+      - if: steps.gate.outputs.needed == 'true'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+    outputs:
+      needed: ${{ steps.gate.outputs.needed }}
+
+  deploy:
+    needs: build
+    if: needs.build.outputs.needed == 'true'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

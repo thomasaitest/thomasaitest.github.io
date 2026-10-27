@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="nb">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#f4f6fb" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0e1117" media="(prefers-color-scheme: dark)" />
+    <meta name="description" content="Samleside for Thomas sine nettapper, med enkel statistikk." />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <title>Thomas sine apper</title>
+    <script type="module" src="/src/main.js"></script>
+  </head>
+  <body>
+    <main class="wrap">
+      <header class="hero">
+        <h1 id="title">Thomas sine apper</h1>
+        <p id="subtitle" class="muted"></p>
+      </header>
+
+      <section aria-labelledby="totals-h">
+        <h2 id="totals-h" class="section-title">Totalt</h2>
+        <div id="totals" class="tiles" aria-live="polite"></div>
+      </section>
+
+      <section aria-labelledby="apps-h">
+        <h2 id="apps-h" class="section-title">Appene</h2>
+        <div id="apps" class="cards"></div>
+      </section>
+
+      <p id="status" class="muted small" role="status">Laster …</p>
+
+      <footer class="foot muted small">
+        <p id="updated"></p>
+        <details>
+          <summary>Slik telles tallene</summary>
+          <ul>
+            <li><strong>Kodelinjer:</strong> linjer som ikke er tomme i <code>src/</code> og <code>index.html</code> (testfiler telles separat).</li>
+            <li><strong>Testdekning:</strong> linjedekning fra Vitest (v8) over alle kildefiler i <code>src/</code>, også filer uten tester.</li>
+            <li><strong>Bugs rettet:</strong> commit-meldinger som starter med <code>fix:</code>, eller som inneholder ord som fix, bug, patch eller regression.</li>
+            <li><strong>Sikkerhet rettet:</strong> commit-meldinger som starter med <code>security:</code>, eller som nevner vulnerability, CVE, XSS, CSRF eller audit.</li>
+            <li><strong>Appstørrelse:</strong> hele bygget (<code>dist/</code>), ukomprimert og gzip.</li>
+            <li><strong>Sårbarheter:</strong> åpne funn fra <code>npm audit</code>. «Produksjon» er det som faktisk sendes til brukeren.</li>
+          </ul>
+        </details>
+      </footer>
+    </main>
+  </body>
+</html>

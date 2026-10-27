@@ -67,10 +67,12 @@ function card(a) {
 
   const open = el('a', 'btn', 'Åpne appen');
   open.href = a.url;
+  open.target = '_blank';
   open.rel = 'noopener';
   open.append(el('span', 'arrow', '→'));
   const src = el('a', 'link', 'Kildekode');
   src.href = `https://github.com/${a.repo}`;
+  src.target = '_blank';
   src.rel = 'noopener';
   const actions = el('div', 'actions');
   actions.append(open, src);

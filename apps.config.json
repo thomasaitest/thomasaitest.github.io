@@ -23,6 +23,16 @@
       "repo": "thomasaitest/heddas-verden",
       "tags": ["Spill", "3D", "PWA"],
       "loc": { "paths": ["src", "index.html"] }
+    },
+    {
+      "id": "sjakkstreak",
+      "name": "Sjakkstreak",
+      "emoji": "♟️",
+      "description": "Lær sjakk i korte leksjoner: taktikk, åpninger, sluttspill og strategi. Bare læring og streak-dager, uten reklame og uten konto. Virker uten nett.",
+      "url": "https://thomasaitest.github.io/sjakkstreak/",
+      "repo": "thomasaitest/sjakkstreak",
+      "tags": ["Læring", "Sjakk", "PWA"],
+      "loc": { "paths": ["src", "index.html"] }
     }
   ]
 }

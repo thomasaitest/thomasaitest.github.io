@@ -26,13 +26,14 @@
       "id": "heddas-verden",
       "name": "Heddas verden",
       "emoji": "🐾",
-      "description": "3D-spill for barn: adopter kjæledyr, stell dem, lag din egen figur og bygg ditt eget hus.",
+      "description": "3D-by for barn: kjæledyr, avatar, hus på tomter, butikker, lekeplass, biler og flerspiller – gå sammen i samme rom, se huset og bilen til vennene dine.",
       "url": "https://thomasaitest.github.io/heddas-verden/",
       "repo": "thomasaitest/heddas-verden",
       "tags": [
         "Spill",
         "3D",
-        "PWA"
+        "PWA",
+        "Flerspiller"
       ],
       "loc": {
         "paths": [

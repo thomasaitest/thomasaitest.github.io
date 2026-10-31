@@ -11,8 +11,16 @@
       "description": "Klassisk Klondike uten reklame og uten konto. Smart trykk, hint og angre. Virker uten nett.",
       "url": "https://thomasaitest.github.io/solitaire/",
       "repo": "thomasaitest/solitaire",
-      "tags": ["Spill", "PWA"],
-      "loc": { "paths": ["src", "index.html"] }
+      "tags": [
+        "Spill",
+        "PWA"
+      ],
+      "loc": {
+        "paths": [
+          "src",
+          "index.html"
+        ]
+      }
     },
     {
       "id": "heddas-verden",
@@ -21,8 +29,17 @@
       "description": "3D-spill for barn: adopter kjæledyr, stell dem, lag din egen figur og bygg ditt eget hus.",
       "url": "https://thomasaitest.github.io/heddas-verden/",
       "repo": "thomasaitest/heddas-verden",
-      "tags": ["Spill", "3D", "PWA"],
-      "loc": { "paths": ["src", "index.html"] }
+      "tags": [
+        "Spill",
+        "3D",
+        "PWA"
+      ],
+      "loc": {
+        "paths": [
+          "src",
+          "index.html"
+        ]
+      }
     },
     {
       "id": "sjakkstreak",
@@ -31,8 +48,35 @@
       "description": "Lær sjakk i korte leksjoner: taktikk, åpninger, sluttspill og strategi. Bare læring og streak-dager, uten reklame og uten konto. Virker uten nett.",
       "url": "https://thomasaitest.github.io/sjakkstreak/",
       "repo": "thomasaitest/sjakkstreak",
-      "tags": ["Læring", "Sjakk", "PWA"],
-      "loc": { "paths": ["src", "index.html"] }
+      "tags": [
+        "Læring",
+        "Sjakk",
+        "PWA"
+      ],
+      "loc": {
+        "paths": [
+          "src",
+          "index.html"
+        ]
+      }
+    },
+    {
+      "id": "blokkverden",
+      "name": "Blokkverden",
+      "emoji": "⛏️",
+      "description": "Blokkbyggespill i 3D inspirert av Minecraft: overlevelsesmodus med graving, bygging, håndverk, monstre, vann og lava, båter og Helvete. Spilles i Chrome med tastatur og mus.",
+      "url": "https://thomasaitest.github.io/blokkverden/",
+      "repo": "thomasaitest/blokkverden",
+      "tags": [
+        "Spill",
+        "3D"
+      ],
+      "loc": {
+        "paths": [
+          "src",
+          "index.html"
+        ]
+      }
     }
   ]
 }

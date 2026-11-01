@@ -65,12 +65,13 @@
       "id": "blokkverden",
       "name": "Blokkverden",
       "emoji": "⛏️",
-      "description": "Blokkbyggespill i 3D inspirert av Minecraft: overlevelsesmodus med graving, bygging, håndverk, monstre, vann og lava, båter og Helvete. Spilles i Chrome med tastatur og mus.",
+      "description": "Blokkbyggespill i 3D inspirert av Minecraft: overlevelsesmodus med graving, bygging, håndverk, monstre, vann og lava, båter og Helvete — nå med flerspiller (Sammen): lag eller bli med i et rom, se venner og bygg sammen.",
       "url": "https://thomasaitest.github.io/blokkverden/",
       "repo": "thomasaitest/blokkverden",
       "tags": [
         "Spill",
-        "3D"
+        "3D",
+        "Flerspiller"
       ],
       "loc": {
         "paths": [

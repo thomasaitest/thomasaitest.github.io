@@ -43,6 +43,26 @@
       }
     },
     {
+      "id": "thomas-verden",
+      "name": "Thomas-verden",
+      "emoji": "🌆",
+      "description": "Futuristisk by: kjæledyr, figur, hus og svevebiler.",
+      "url": "https://thomasaitest.github.io/thomas-verden/",
+      "repo": "thomasaitest/thomas-verden",
+      "thumb": "thumbs/thomas-verden.webp",
+      "tags": [
+        "Spill",
+        "3D",
+        "PWA"
+      ],
+      "loc": {
+        "paths": [
+          "src",
+          "index.html"
+        ]
+      }
+    },
+    {
       "id": "sjakkstreak",
       "name": "Sjakkstreak",
       "emoji": "♟️",

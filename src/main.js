@@ -51,6 +51,16 @@ function openProd(apps) {
 
 function card(a) {
   const c = el('article', 'card');
+  if (a.thumb) {
+    const fig = el('div', 'card-thumb');
+    const img = el('img');
+    img.src = a.thumb.startsWith('http') || a.thumb.startsWith('/') ? a.thumb : `./${a.thumb}`;
+    img.alt = '';
+    img.loading = 'lazy';
+    img.decoding = 'async';
+    fig.append(img);
+    c.append(fig);
+  }
   const head = el('div', 'card-head');
   const emoji = a.emoji ? el('span', 'emoji', a.emoji) : null;
   if (emoji) emoji.setAttribute('aria-hidden', 'true');

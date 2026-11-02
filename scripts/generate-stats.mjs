@@ -198,6 +198,7 @@ function processApp(app) {
 
 const meta = (app) => ({
   id: app.id, name: app.name, emoji: app.emoji, description: app.description, tags: app.tags ?? [], url: app.url, repo: app.repo,
+  ...(app.thumb ? { thumb: app.thumb } : {}),
 });
 
 const sum = (list, f) => list.reduce((a, x) => a + (f(x) ?? 0), 0);

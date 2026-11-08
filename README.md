@@ -29,8 +29,8 @@ npm test           # enhetstester for telleregler og oppdateringssjekk
 | Testdekning | Linjedekning (v8) over alle `src/**/*.ts(x)`, også filer ingen test laster. Det gir et ærlig, lavt tall for UI- og 3D-kode. |
 | Bugs rettet | Commit som starter med `fix:` (også `fix(scope):`, `bugfix:`, `hotfix:`), eller hvis emnelinjen inneholder `fix/fixed/fixes`, `bug`, `bugfix`, `hotfix`, `regression` eller `patch`. |
 | Sikkerhet rettet | Commit som starter med `security:` eller `sec:`, eller emnelinje med `vulnerability`, `vuln`, `CVE-…`, `XSS`, `CSRF` eller `audit`, eller `security`/`sanitize`/`harden` sammen med fix/patch/resolve/close. |
-| | Hver commit telles høyst én gang; sikkerhet går foran bug. Merge-commits ignoreres. Se `scripts/classify.mjs` og testene. |
-| Commits / sist oppdatert | `git log` på standardgrenen. |
+| | Hver commit telles høyst én gang; sikkerhet går foran bug. Merge-commits ignoreres, både i `git log --no-merges` og når emnet starter med `Merge`. Se `scripts/classify.mjs` og testene. |
+| Commits / sist oppdatert | `git log --no-merges` på standardgrenen. |
 | Appstørrelse | Summen av alle filer i `dist/` etter `npm run build`, ukomprimert og gzip (nivå 9). |
 | Sårbarheter | `npm audit --json` totalt og med `--omit=dev` (produksjon), fordelt på alvorlighetsgrad. |
 

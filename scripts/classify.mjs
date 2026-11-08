@@ -9,7 +9,9 @@ const SECURITY_WITH_VERB = /\b(security|secure|sanitiz\w*|harden\w*)\b.*\b(fix\w
 const BUG_WORDS = /\b(fix(e[sd])?|bug(s|fix(es)?)?|hotfix|regression|patch(e[sd])?)\b/i;
 
 export function isMerge(subject) {
-  return /^Merge (branch|pull request|remote-tracking)/i.test(subject);
+  // Standardmeldinger («Merge branch…», «Merge pull request…») og korte
+  // egendefinerte merge-emner («Merge quest-sheet mobile fix»).
+  return /^Merge\b/i.test(subject);
 }
 
 /** @returns {'security'|'bug'|null} */

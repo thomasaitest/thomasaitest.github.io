@@ -49,7 +49,8 @@ function countLines(text) {
 }
 
 function gitStats(dir) {
-  const raw = execFileSync('git', ['log', '--no-color', '--format=%cI%x1f%s'], { cwd: dir, encoding: 'utf8' });
+  // Merge-commits har flere foreldre og ignoreres, også når emnet ikke matcher standardmalen.
+  const raw = execFileSync('git', ['log', '--no-merges', '--no-color', '--format=%cI%x1f%s'], { cwd: dir, encoding: 'utf8' });
   const rows = raw.split('\n').filter(Boolean).map((l) => l.split('\x1f'));
   const subjects = rows.map((r) => r[1]);
   const { bugs, security } = countCommits(subjects);

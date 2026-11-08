@@ -20,6 +20,8 @@ test('non-fixes and merges are ignored', () => {
   assert.equal(classify('Add security headers'), null);
   assert.equal(classify('Facelift: iOS glass look'), null);
   assert.equal(classify('Merge branch fix-stuff into main'), null);
+  assert.equal(classify('Merge pull request #1 from thomasaitest/cursor/eight-gameplay-fixes-4a3d'), null);
+  assert.equal(classify('Merge quest-sheet mobile fix'), null);
   assert.equal(classify('Smart tap instead of auto-play'), null);
   assert.equal(classify('prefix handling'), null);
 });
